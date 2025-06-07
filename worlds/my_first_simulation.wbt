@@ -1,0 +1,76 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "../protos/TrackOne.proto"
+
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.11896727445106366 -0.9389694747704646 -0.32277408981974287 5.535081485730444
+  position -1.0584853745524736 -0.18570066401850116 0.9121173373486434
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0 0.5 0
+  floorSize 2 2
+  floorTileSize 0.25 0.25
+  floorAppearance NULL
+  wallHeight 0.05
+}
+TrackOne {
+  translation 0 0 -1
+  rotation 1 0 0 1.5707996938995747
+}
+E-puck {
+  hidden position_0_0 538.0383691797545
+  hidden position_0_1 494.42248563327007
+  hidden linearVelocity_0 -0.0386529530620232 -0.012999946023795535 -1.8122932515728048e-05
+  hidden angularVelocity_0 -0.4093743296127546 1.2138102676660116 9.375229659345298e-05
+  hidden rotation_1 0 -1 0 2.315567237689983
+  hidden linearVelocity_1 -0.032590388170222126 -0.010945402273262675 -7.429425962812641e-06
+  hidden angularVelocity_1 0.5472759613247736 -1.6295720979417352 -0.000349338098215555
+  hidden rotation_2 0 1 0 4.334031673262325
+  hidden linearVelocity_2 -0.03258482824313102 -0.010961901526555011 -7.702082513838518e-06
+  hidden angularVelocity_2 0.5481223064816393 -1.62928677612806 -9.420727127572415e-05
+  translation 0.3922867200804373 -0.21024866798106998 -2.915253004212061e-05
+  rotation -0.009345955571265255 -0.0015262911496558825 -0.9999551607696148 2.8164443405082755
+  controller "epuck_line_follower"
+  groundSensorsSlot [
+    DistanceSensor {
+      rotation 0 1 0 1.7016996938995748
+      name "ir4"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0 0.01 0
+      rotation 0 1 0 1.7016996938995748
+      name "ir3"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0 -0.01 0
+      rotation 0 1 0 1.7016996938995748
+      name "ir2"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0 0.02 0
+      rotation 0 1 0 1.7016996938995748
+      name "ir0"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0 -0.02 0
+      rotation 0 1 0 1.7017
+      name "ir1"
+      type "infra-red"
+    }
+  ]
+}
